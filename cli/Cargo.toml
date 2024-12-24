@@ -1,0 +1,20 @@
+[package]
+name = "tdr"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "todo.txt cli written in Rust"
+default-run = "tdr"
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true, features = ["derive"] }
+chrono = { workspace = true }
+tracing = { workspace = true }
+tracing-appender = { workspace = true }
+tracing-subscriber = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+todo-txt-manager = { workspace = true, features = ["rt_tokio"] }
+todo-txt-model = { workspace = true }
+todo-txt-serializer = { workspace = true }

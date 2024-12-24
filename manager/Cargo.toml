@@ -1,0 +1,27 @@
+[package]
+name = "todo-txt-manager"
+version.workspace = true
+authors.workspace = true
+description.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+chrono = { workspace = true }
+clap = { workspace = true, features = ["derive"] }
+dotenvy = { workspace = true }
+rayon = { workspace = true, optional = true }
+tracing = { workspace = true }
+todo-txt-model = { workspace = true }
+todo-txt-serializer = { workspace = true }
+
+async-std = { workspace = true, features = ["attributes"], optional = true }
+smol = { workspace = true, optional = true }
+tokio = { workspace = true, features = ["full"], optional = true }
+
+[features]
+default = ["parallel"]
+rt_tokio = ["tokio/full"]
+rt_async_std = ["async-std"]
+rt_smol = ["smol"]
+parallel = ["rayon"]

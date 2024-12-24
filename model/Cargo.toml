@@ -1,0 +1,12 @@
+[package]
+name = "todo-txt-model"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Task model"
+
+[dependencies]
+chrono = { workspace = true, features = ["serde"] }
+clap = { workspace = true, features = ["derive"] }
+thiserror = { workspace = true }

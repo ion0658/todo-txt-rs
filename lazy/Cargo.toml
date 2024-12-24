@@ -1,0 +1,17 @@
+[package]
+name = "lazytodo"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Todo.txt TUI written in Rust"
+
+[dependencies]
+anyhow = { workspace = true }
+crossterm = { workspace = true, features = ["event-stream"] }
+futures = { workspace = true }
+ratatui = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+todo-txt-manager = { workspace = true, features = ["rt_tokio"] }
+todo-txt-model = { workspace = true }
+todo-txt-serializer = { workspace = true }

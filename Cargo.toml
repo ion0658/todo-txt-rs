@@ -1,0 +1,32 @@
+[workspace]
+members = ["cli", "lazy", "manager", "model", "serializer"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+authors = ["IonOH"]
+description = "todo.txt written in Rust"
+edition = "2021"
+license = "MIT"
+
+[workspace.dependencies]
+anyhow = { version = "1" }
+async-std = { version = "1" }
+chrono = { version = "0" }
+clap = { version = "4" }
+crossterm = { version = "0" }
+color-eyre = { version = "0" }
+dotenvy = { version = "0" }
+futures = { version = "0" }
+ratatui = { version = "0" }
+rayon = { version = "1" }
+smol = { version = "2" }
+thiserror = { version = "2" }
+tracing = { version = "0" }
+tracing-appender = { version = "0" }
+tracing-subscriber = { version = "0" }
+tokio = { version = "1" }
+
+todo-txt-manager = { path = "./manager" }
+todo-txt-model = { path = "./model" }
+todo-txt-serializer = { path = "./serializer" }
